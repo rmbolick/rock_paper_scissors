@@ -47,15 +47,48 @@
                 return "Invalid Play";
             }
         }
-        
-        for (i = 0; i < 10; i++) {
-            const playerSelect = 'rock';
-            var computerSelect = computerPlay();
-            console.log('----------------------------')
-            console.log(`Player: ${playerSelect}`)
-            console.log(`Computer: ${computerSelect}`)
-            console.log(playRound(playerSelect, computerSelect))
+
+        function getWin(inp) {
+            if (inp.includes("Win")){
+                return 1;
+            } else if (inp.includes("Lose")){
+                return 0;
+            } else {
+                return 2;
+            }
+           
         }
+        
+        function game(rounds){
+            let score_player=0;
+            let score_computer=0;
+            let curr_round=1;
+            const playerSelect = 'rock';
+            
+            for (i=1; i<=rounds; i++) {
+                let computerSelect = computerPlay();
+                let result = playRound(playerSelect, computerSelect);
+                console.log(`-------------Round ${i}-------------`);
+                console.log(`Player: ${playerSelect}`);
+                console.log(`Computer: ${computerSelect}`);
+                console.log(result)
+                if (getWin(result) === 1){
+                    score_player++;
+                } 
+                if (getWin(result) === 0) {
+                    score_computer++;
+                } 
+
+                console.log(`Player Score: ${score_player}`)
+                console.log(`Computer Score: ${score_computer}`)
+                
+
+            }
+
+        }
+
+        game(5)
+        
         
     </script>
 </html>
