@@ -1,0 +1,61 @@
+<html>
+    <body>
+
+    </body>
+    <script>
+
+        function computerPlay(){
+            let possibleVals = ['rock','paper','scissors'];
+            return possibleVals[Math.floor(Math.random() * 3)];
+        }
+
+        function computerPlayTest(){
+            let possibleVals = ['rock','paper','scissors'];
+            return Math.floor(Math.random() * 3);
+        }
+
+        function playRound(playerSelection, computerSelection){
+            let playerVal = playerSelection.toLowerCase();
+            let possibleVals = ['rock','paper','scissors'];
+            if (possibleVals.includes(playerVal)) {
+                if (playerVal === 'rock') {
+                    if (computerSelection ==='rock') {
+                        return "Draw! Rock ties Rock";
+                    } else if (computerSelection === 'scissors') {
+                        return "You Win! Rock beats Scissors";
+                    } else {
+                        return "You Lose! Paper beats Rock";
+                    }
+                } else if (playerVal === 'scissors') {
+                    if (computerSelection ==='rock') {
+                        return "You Lose! Rock beats Scissors";
+                    } else if (computerSelection === 'scissors') {
+                        return "Draw! Scissors tie Scissors";
+                    } else {
+                        return "You Win! Scissors beat Paper";
+                    }
+                } else {
+                    if (computerSelection ==='rock') {
+                        return "You Win! Paper beats Rock";
+                    } else if (computerSelection === 'scissors') {
+                        return "You Lose! Scissors beat Paper";
+                    } else {
+                        return "Draw! Paper ties Paper";
+                    }
+                }
+            } else {
+                return "Invalid Play";
+            }
+        }
+        
+        for (i = 0; i < 10; i++) {
+            const playerSelect = 'rock';
+            var computerSelect = computerPlay();
+            console.log('----------------------------')
+            console.log(`Player: ${playerSelect}`)
+            console.log(`Computer: ${computerSelect}`)
+            console.log(playRound(playerSelect, computerSelect))
+        }
+        
+    </script>
+</html>
