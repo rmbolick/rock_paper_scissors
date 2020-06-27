@@ -6,16 +6,17 @@
 
     <body>
         <div>
-            <button onclick="setAsRock()" type="button">Rock</button>
-            <button onclick="setAsPaper()" type="button">Paper</button>
-            <button onclick="setAsScissors()" type="button">Scissors</button> 
+            <h1>Rock, Paper, or Scissors</h1>
+            <input type="image" src=assets/rock.png onclick="setAsRock()">
+            <input type="image" src=assets/paper.png onclick="setAsPaper()">
+            <input type="image" src=assets/scissors.png onclick="setAsScissors()">
             <p id="round">Press Rock, Paper, or Scissors to Begin!</p>
-            <p id="player"></p>
-            <p id="computer"></p>
-            <p id="output"></p>
-            <p id="player_score"></p>
-            <p id="computer_score"></p>
-            <p id="final_result"></p>
+            <p class="game_text" id="player"></p>
+            <p class="game_text" id="computer"></p>
+            <p class="game_text" id="output"></p>
+            <p class="game_text" id="player_score"></p>
+            <p class="game_text" id="computer_score"></p>
+            <p class="game_text" id="final_result"></p>
         </div>
     </body>
     

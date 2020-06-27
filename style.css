@@ -2,6 +2,23 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    margin-left: 10px;
     -webkit-appearance: none;
+}
+
+input {
+    width: 400px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+#round {
+    font-size: 30px;
+}
+
+.game_text {
+    font-size: 25px;
 }
 
